@@ -1,233 +1,382 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultants (CICC-RCIC)- Mr. Md. Abdur RahmanLicensed by the College of Immigration and Citizenship</title>
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Mr. Md. Abdur Rahman | Regulated Canadian Immigration Consultant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary-bg: #0b0f1a;
-            --card-bg: #1e293b;
-            --accent-color: #2563eb;
-            --whatsapp-color: #25d366;
+            --primary: #002f6c;    /* কর্পোরেট ডিপ ব্লু */
+            --secondary: #004b87;  /* লাইট ব্লু */
+            --accent: #c62828;     /* ম্যাপেল রেড */
+            --dark: #0f172a;
+            --light: #f8fafc;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-        body { background-color: var(--primary-bg); color: white; overflow-x: hidden; scroll-behavior: smooth; }
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
-        /* Navbar */
+        /* 🌐 নেভিগেশন বার */
         .navbar {
-            background: rgba(15, 23, 42, 0.9);
-            padding: 20px 5%;
+            background-color: #ffffff;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
-            position: fixed;
-            width: 100%;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
             top: 0;
             z-index: 1000;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #334155;
         }
 
-        .logo { font-size: 24px; font-weight: bold; color: var(--accent-color); }
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--primary);
+            text-transform: uppercase;
+        }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            background: radial-gradient(circle at center, #1e293b 0%, #0b0f1a 100%);
+            list-style: none;
+            gap: 25px;
         }
 
-        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 800px; }
-
-        /* Section Title Animation */
-        .section-title {
-            text-align: center;
-            margin: 80px 0 40px;
-            font-size: 2.5rem;
-            color: var(--accent-color);
-        }
-
-        /* Services Grid */
-        .services {
-            padding: 20px 5% 100px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 25px;
-            padding: 25px;
-            border: 1px solid #334155;
-            transition: 0.4s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card:hover { border-color: var(--accent-color); transform: translateY(-10px); }
-
-        .card img {
-            width: 100%;
-            border-radius: 15px;
-            margin-bottom: 20px;
-            transition: 0.5s;
-        }
-
-        .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
-
-        .card ul { list-style: none; margin-bottom: 25px; }
-        .card ul li { margin-bottom: 12px; color: #cbd5e1; display: flex; align-items: center; }
-        .card ul li i { color: var(--whatsapp-color); margin-right: 12px; }
-
-        /* Custom WhatsApp Button */
-        .order-btn {
-            background: linear-gradient(45deg, #25d366, #128c7e);
-            color: white;
+        .nav-links a {
             text-decoration: none;
-            padding: 15px;
-            border-radius: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.2s;
         }
 
-        .order-btn:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
 
-        .footer { padding: 50px; text-align: center; border-top: 1px solid #1e293b; color: #64748b; }
+        /* 🍁 হিরো ব্যানার সেকশন */
+        .hero {
+            background: linear-gradient(135deg, rgba(0,47,108,0.95) 0%, rgba(0,75,135,0.9) 100%), 
+                        url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            color: #ffffff;
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+
+        .badge-verified {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--accent);
+            color: #ffffff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        /* 💼 সার্ভিস সেকশন */
+        .services {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: var(--primary);
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-bottom-color: var(--primary);
+        }
+
+        .service-card i {
+            font-size: 35px;
+            color: var(--secondary);
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* ☎️ কন্টাক্ট সেকশন */
+        .contact-section {
+            background-color: #ffffff;
+            padding: 60px 5%;
+        }
+
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .contact-info h2 {
+            font-size: 26px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            background: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .info-item i {
+            font-size: 20px;
+            color: var(--accent);
+            width: 25px;
+            text-align: center;
+        }
+
+        .info-text span {
+            display: block;
+            font-size: 12px;
+            color: #64748b;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .info-text a, .info-text p {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--dark);
+            text-decoration: none;
+            margin: 0;
+        }
+
+        /* কন্টাক্ট ফর্ম */
+        .contact-form {
+            background: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--secondary);
+        }
+
+        /* 📋 ফুটার */
+        footer {
+            background-color: var(--primary);
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .section-title { font-size: 1.8rem; }
+            .contact-container { grid-template-columns: 1fr; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 28px; }
         }
     </style>
 </head>
 <body>
 
     <nav class="navbar">
-        <div style="color: white;"><i class="fas fa-bars"></i></div>
-   <div class="logo">Consultants (CICC-RCIC) Travel</div>
+        <div class="logo">Rahman<span>Travel</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </nav>
 
-    <section class="hero" data-aos="fade-up">
-        <h1>ডিজিটাল মার্কেটিংয়ের ভবিষ্যৎ এখন আপনার হাতে</h1>
-        <p>আমরা আপনার সোশ্যাল মিডিয়া উপস্থিতিকে নিয়ে যাবো এক অনন্য উচ্চতায়। আমাদের প্রিমিয়াম সার্ভিসগুলো দেখুন নিচে স্ক্রল করে।</p>
+    <section class="hero" id="home">
+        <div class="badge-verified">
+            <i class="fa-solid fa-shield-check"></i> 🍁 Regulated Member CICC-RCIC
+        </div>
+        <h1>Mr. Md. Abdur Rahman</h1>
+        <p>Senior Immigration Consultant providing professional and transparent advice for your Canadian immigration pathway.</p>
+        <p style="font-weight: bold; font-size: 16px;">License Code: RCIC #500819</p>
     </section>
 
-    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">আমাদের বিশেষ সার্ভিসসমূহ</h2>
-
-    <div class="services">
-        <div class="card" data-aos="fade-right">
-            <img src="https://uploads.onecompiler.io/44erpqqpq/44fhdgbn8/8373.jpg" alt="FB">
-            <h3>ফেসবুক গ্রোথ প্যাকেজ</h3>
-            <ul>
-                <li><i class="fas fa-check"></i> পেজ ও প্রোফাইল ফলোয়ার</li>
-                <li><i class="fas fa-check"></i> ৬ লক্ষ মিনিট ওয়াচ টাইম</li>
-                <li><i class="fas fa-check"></i> আইডি রিকভারি সাপোর্ট</li>
-            </ul>
-            <a href="https://wa.me/8801615342435?text=Hi,😊%20Nahid%20ভাই,%20আমি%20ফেসবুক%20সার্ভিস%20নিতে%20চাই" class="order-btn">
-                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> অর্ডার করুন
-            </a>
+    <section class="services" id="services">
+        <h2 class="section-title">Our Visa Categories</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>Work Permits</h3>
+                <p>Comprehensive assistance with LMIA and employer-specific work applications.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h3>Study Permits</h3>
+                <p>Guidance on choosing designated learning institutions and student visa process.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-passport"></i>
+                <h3>Express Entry</h3>
+                <p>Strategic management of Federal Skilled Worker and CEC profile submissions.</p>
+            </div>
         </div>
+    </section>
 
-        <div class="card" data-aos="fade-up">
-            <img src="https://uploads.onecompiler.io/44erpqqpq/44fhdgbn8/8371.jpg" alt="YT">
-            <h3>ইউটিউব মনিটাইজেশন</h3>
-            <ul>
-                <li><i class="fas fa-check"></i> ৪০০০ ঘণ্টা ওয়াচ টাইম</li>
-                <li><i class="fas fa-check"></i> রিয়েল সাবস্ক্রাইবার বুস্ট</li>
-                <li><i class="fas fa-check"></i> চ্যানেল এসইও মাস্টারলিস্ট</li>
-            </ul>
-            <a href="https://wa.me/8801615342435?text=Hi,😊%20Nahid%20ভাই,%20আমি%20ইউটিউব%20সার্ভিস%20নিতে%20চাই" class="order-btn">
-                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> অর্ডার করুন
-            </a>
+    <section class="contact-section" id="contact">
+        <h2 class="section-title" style="text-align: center;">Contact Our Expert Team</h2>
+        <div class="contact-container">
+            
+            <div class="contact-info">
+                <h2>Get In Touch</h2>
+                <p>Connect directly with our support helpdesks or leave a message for case assessment.</p>
+                
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <div class="info-text">
+                            <span>Primary Helpline</span>
+                            <a href="tel:+13653953775">+1 (365) 395-3775</a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <div class="info-text">
+                            <span>Support Desk</span>
+                            <a href="tel:+16722844386">+1 (672) 284-4386</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fa-solid fa-id-card"></i>
+                        <div class="info-text">
+                            <span>Consultant ID</span>
+                            <p>RCIC #500819</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <form onsubmit="event.preventDefault(); alert('Inquiry submitted successfully.');">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email Address" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Briefly describe your visa case..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Send Message</button>
+                </form>
+            </div>
+
         </div>
+    </section>
 
-        <div class="card" data-aos="fade-left">
-            <img src="https://uploads.onecompiler.io/44fhurcgn/44ftzuyed/8691.webp" alt="TT">
-            <h3>টিকটক মার্কেটিং</h3>
-            <ul>
-                <li><i class="fas fa-check"></i> ভিডিও ভিউ ও লাইক বুস্ট</li>
-                <li><i class="fas fa-check"></i> টিকটক রিয়েল ফলোয়ার</li>
-                <li><i class="fas fa-check"></i> কন্টেন্ট প্রমোশন স্ট্র্যাটেজি</li>
-            </ul>
-            <a href="https://wa.me/8801615342435?text=Hi,😊%20Nahid%20ভাই,%20আমি%20টিকটক%20সার্ভিস%20নিতে%20চাই" class="order-btn">
-                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> অর্ডার করুন
-            </a>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <p>© 2026 Nahid Dream Deployer | All Rights Reserved.</p>
+    <footer>
+        <p>&copy; 🍁 2026 Regulated Canadian Immigration Consultant. All Rights Reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1200, // অ্যানিমেশন কতক্ষণ স্থায়ী হবে (১.২ সেকেন্ড)
-            once: false,    // প্রতিবার স্ক্রল করলে অ্যানিমেশন হবে
-        });
-    </script>
-    <div id="notification-box" style="display: none; position: fixed; bottom: 80px; left: 20px; background: #1e293b; border: 1px solid #334155; padding: 12px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 10000; align-items: center; min-width: 250px; border-left: 4px solid #25d366;">
-    <div style="background: #25d36622; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 12px;">
-        <i class="fas fa-shopping-cart" style="color: #25d366;"></i>
-    </div>
-    <div>
-        <div style="font-size: 14px; color: white;"><strong id="notif-name">সাদিয়া</strong> রেজিস্ট্রেশন করেছেন</div>
-        <div style="font-size: 12px; color: #94a3b8;"><i class="fas fa-map-marker-alt" style="color: #ff4d4d; margin-right: 4px;"></i> <span id="notif-dist">সিলেট</span> • <span id="notif-time">১ মিনিট আগে</span></div>
-    </div>
-</div>
-
-<script>
-    const names = ["সাদিয়া", "আরিফ", "নাহিদ", "সুমাইয়া", "রাকিব", "তানজিনা", "ইমরান", "মিম", "সোহেল", "রিমা", "জাহিদ", "ফারহানা", "আশিক", "নাসরিন", "ফয়সাল", "আফসানা", "মাহিন", "লিমা", "রুবেল", "তানিয়া", "রিফাত", "নুসরাত", "সাব্বির", "পিয়া", "সাকিব", "মৌ", "আবির", "মুন্নি", "রাসেল", "জুই"];
-    const districts = ["ঢাকা", "চট্টগ্রাম", "সিলেট", "রাজশাহী", "রংপুর", "খুলনা", "বরিশাল", "গাজীপুর", "বগুড়া", "কুমিল্লা", "নোয়াখালী", "যশোর", "ময়মনসিংহ", "ফেনী", "কক্সবাজার", "কুষ্টিয়া", "দিনাজপুর", "টাঙ্গাইল", "চাঁদপুর", "সিরাজগঞ্জ"];
-    const times = ["১ মিনিট আগে", "২ মিনিট আগে", "৩ মিনিট আগে", "৪ মিনিট আগে", "৫ মিনিট আগে", "১০ সেকেন্ড আগে", "৩০ সেকেন্ড আগে", "জাস্ট এখন"];
-
-    function showNotification() {
-        const name = names[Math.floor(Math.random() * names.length)];
-        const district = districts[Math.floor(Math.random() * districts.length)];
-        const time = times[Math.floor(Math.random() * times.length)];
-
-        document.getElementById('notif-name').innerText = name;
-        document.getElementById('notif-dist').innerText = district;
-        document.getElementById('notif-time').innerText = time;
-
-        const box = document.getElementById('notification-box');
-        box.style.display = 'flex';
-        box.style.animation = 'fadeInUp 0.5s ease-out forwards';
-
-        setTimeout(() => {
-            box.style.animation = 'fadeOutDown 0.5s ease-in forwards';
-            setTimeout(() => { box.style.display = 'none'; }, 500);
-        }, 5000); // পপ-আপ ৫ সেকেন্ড থাকবে
-    }
-
-    // প্রতি ৮ থেকে ১২ সেকেন্ড পর পর নতুন নোটিফিকেশন আসবে
-    setInterval(showNotification, Math.floor(Math.random() * (12000 - 8000 + 1)) + 8000);
-
-    // CSS অ্যানিমেশন সরাসরি স্টাইলে যুক্ত করুন
-    const style = document.createElement('style');
-    style.innerHTML = `
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeOutDown { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(20px); } }
-    `;
-    document.head.appendChild(style);
-</script>
 </body>
 </html>
