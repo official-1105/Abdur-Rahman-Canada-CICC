@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Marketing Expert | Nahid</title>
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-bg: #0b0f1a;
+            --card-bg: #1e293b;
+            --accent-color: #2563eb;
+            --whatsapp-color: #25d366;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+
+        body { background-color: var(--primary-bg); color: white; overflow-x: hidden; scroll-behavior: smooth; }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(15, 23, 42, 0.9);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo { font-size: 24px; font-weight: bold; color: var(--accent-color); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #0b0f1a 100%);
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 800px; }
+
+        /* Section Title Animation */
+        .section-title {
+            text-align: center;
+            margin: 80px 0 40px;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 20px 5% 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 25px;
+            padding: 25px;
+            border: 1px solid #334155;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover { border-color: var(--accent-color); transform: translateY(-10px); }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            transition: 0.5s;
+        }
+
+        .card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+
+        .card ul { list-style: none; margin-bottom: 25px; }
+        .card ul li { margin-bottom: 12px; color: #cbd5e1; display: flex; align-items: center; }
+        .card ul li i { color: var(--whatsapp-color); margin-right: 12px; }
+
+        /* Custom WhatsApp Button */
+        .order-btn {
+            background: linear-gradient(45deg, #25d366, #128c7e);
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .order-btn:hover { transform: scale(1.02); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5); }
+
+        .footer { padding: 50px; text-align: center; border-top: 1px solid #1e293b; color: #64748b; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Nahid Pro</div>
+        <div style="color: white;"><i class="fas fa-bars"></i></div>
+    </nav>
+
+    <section class="hero" data-aos="fade-up">
+        <h1>ডিজিটাল মার্কেটিংয়ের ভবিষ্যৎ এখন আপনার হাতে</h1>
+        <p>আমরা আপনার সোশ্যাল মিডিয়া উপস্থিতিকে নিয়ে যাবো এক অনন্য উচ্চতায়। আমাদের প্রিমিয়াম সার্ভিসগুলো দেখুন নিচে স্ক্রল করে।</p>
+    </section>
+
+    <h2 class="section-title" data-aos="zoom-in" data-aos-duration="1000">আমাদের বিশেষ সার্ভিসসমূহ</h2>
+
+    <div class="services">
+        <div class="card" data-aos="fade-right">
+            <img src="https://uploads.onecompiler.io/44erpqqpq/44fhdgbn8/8373.jpg" alt="FB">
+            <h3>ফেসবুক গ্রোথ প্যাকেজ</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> পেজ ও প্রোফাইল ফলোয়ার</li>
+                <li><i class="fas fa-check"></i> ৬ লক্ষ মিনিট ওয়াচ টাইম</li>
+                <li><i class="fas fa-check"></i> আইডি রিকভারি সাপোর্ট</li>
+            </ul>
+            <a href="https://wa.me/8801615342435?text=Hi,😊%20Nahid%20ভাই,%20আমি%20ফেসবুক%20সার্ভিস%20নিতে%20চাই" class="order-btn">
+                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> অর্ডার করুন
+            </a>
+        </div>
+
+        <div class="card" data-aos="fade-up">
+            <img src="https://uploads.onecompiler.io/44erpqqpq/44fhdgbn8/8371.jpg" alt="YT">
+            <h3>ইউটিউব মনিটাইজেশন</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> ৪০০০ ঘণ্টা ওয়াচ টাইম</li>
+                <li><i class="fas fa-check"></i> রিয়েল সাবস্ক্রাইবার বুস্ট</li>
+                <li><i class="fas fa-check"></i> চ্যানেল এসইও মাস্টারলিস্ট</li>
+            </ul>
+            <a href="https://wa.me/8801615342435?text=Hi,😊%20Nahid%20ভাই,%20আমি%20ইউটিউব%20সার্ভিস%20নিতে%20চাই" class="order-btn">
+                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> অর্ডার করুন
+            </a>
+        </div>
+
+        <div class="card" data-aos="fade-left">
+            <img src="https://uploads.onecompiler.io/44fhurcgn/44ftzuyed/8691.webp" alt="TT">
+            <h3>টিকটক মার্কেটিং</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> ভিডিও ভিউ ও লাইক বুস্ট</li>
+                <li><i class="fas fa-check"></i> টিকটক রিয়েল ফলোয়ার</li>
+                <li><i class="fas fa-check"></i> কন্টেন্ট প্রমোশন স্ট্র্যাটেজি</li>
+            </ul>
+            <a href="https://wa.me/8801615342435?text=Hi,😊%20Nahid%20ভাই,%20আমি%20টিকটক%20সার্ভিস%20নিতে%20চাই" class="order-btn">
+                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> অর্ডার করুন
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 Nahid Dream Deployer | All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200, // অ্যানিমেশন কতক্ষণ স্থায়ী হবে (১.২ সেকেন্ড)
+            once: false,    // প্রতিবার স্ক্রল করলে অ্যানিমেশন হবে
+        });
+    </script>
+    <div id="notification-box" style="display: none; position: fixed; bottom: 80px; left: 20px; background: #1e293b; border: 1px solid #334155; padding: 12px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); z-index: 10000; align-items: center; min-width: 250px; border-left: 4px solid #25d366;">
+    <div style="background: #25d36622; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-right: 12px;">
+        <i class="fas fa-shopping-cart" style="color: #25d366;"></i>
+    </div>
+    <div>
+        <div style="font-size: 14px; color: white;"><strong id="notif-name">সাদিয়া</strong> রেজিস্ট্রেশন করেছেন</div>
+        <div style="font-size: 12px; color: #94a3b8;"><i class="fas fa-map-marker-alt" style="color: #ff4d4d; margin-right: 4px;"></i> <span id="notif-dist">সিলেট</span> • <span id="notif-time">১ মিনিট আগে</span></div>
+    </div>
+</div>
+
+<script>
+    const names = ["সাদিয়া", "আরিফ", "নাহিদ", "সুমাইয়া", "রাকিব", "তানজিনা", "ইমরান", "মিম", "সোহেল", "রিমা", "জাহিদ", "ফারহানা", "আশিক", "নাসরিন", "ফয়সাল", "আফসানা", "মাহিন", "লিমা", "রুবেল", "তানিয়া", "রিফাত", "নুসরাত", "সাব্বির", "পিয়া", "সাকিব", "মৌ", "আবির", "মুন্নি", "রাসেল", "জুই"];
+    const districts = ["ঢাকা", "চট্টগ্রাম", "সিলেট", "রাজশাহী", "রংপুর", "খুলনা", "বরিশাল", "গাজীপুর", "বগুড়া", "কুমিল্লা", "নোয়াখালী", "যশোর", "ময়মনসিংহ", "ফেনী", "কক্সবাজার", "কুষ্টিয়া", "দিনাজপুর", "টাঙ্গাইল", "চাঁদপুর", "সিরাজগঞ্জ"];
+    const times = ["১ মিনিট আগে", "২ মিনিট আগে", "৩ মিনিট আগে", "৪ মিনিট আগে", "৫ মিনিট আগে", "১০ সেকেন্ড আগে", "৩০ সেকেন্ড আগে", "জাস্ট এখন"];
+
+    function showNotification() {
+        const name = names[Math.floor(Math.random() * names.length)];
+        const district = districts[Math.floor(Math.random() * districts.length)];
+        const time = times[Math.floor(Math.random() * times.length)];
+
+        document.getElementById('notif-name').innerText = name;
+        document.getElementById('notif-dist').innerText = district;
+        document.getElementById('notif-time').innerText = time;
+
+        const box = document.getElementById('notification-box');
+        box.style.display = 'flex';
+        box.style.animation = 'fadeInUp 0.5s ease-out forwards';
+
+        setTimeout(() => {
+            box.style.animation = 'fadeOutDown 0.5s ease-in forwards';
+            setTimeout(() => { box.style.display = 'none'; }, 500);
+        }, 5000); // পপ-আপ ৫ সেকেন্ড থাকবে
+    }
+
+    // প্রতি ৮ থেকে ১২ সেকেন্ড পর পর নতুন নোটিফিকেশন আসবে
+    setInterval(showNotification, Math.floor(Math.random() * (12000 - 8000 + 1)) + 8000);
+
+    // CSS অ্যানিমেশন সরাসরি স্টাইলে যুক্ত করুন
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeOutDown { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(20px); } }
+    `;
+    document.head.appendChild(style);
+</script>
+</body>
+</html>
