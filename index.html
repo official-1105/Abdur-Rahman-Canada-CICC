@@ -411,15 +411,35 @@
     </section>
 
     <footer>
-               <p style="font-weight: bold; font-size: 15px;">&copy; 🍁 2026 Regulated Canadian Immigration Consultant. All Rights Reserved.</p>
+        <p style="font-weight: bold; font-size: 15px;">&copy; 🍁 2026 Regulated Canadian Immigration Consultant. All Rights Reserved.</p>
     </footer>
-<script>
-    <!-- আপনার ফাইলের শেষ অংশটি দেখতে ঠিক এমন হবে -->
-document.getElementById("loginForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    alert("অসংখ্য ধন্যবাদ আপনার তথ্য সাবমিট করার জন্য, আমরা আপনার তথ্যটি অনুসরণ সেস এ, আমরা আপনার সাথে যোগাযোগ করব।");
-    window.location.href = "[+13653953775](+13653953775)";
-});
-</script>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="success-popup">
+            <div class="popup-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h4>সাবমিট সফল হয়েছে!</h4>
+            <p>অসংখ্য ধন্যবাদ আপনার তথ্য সাবমিট করার জন্য। আমরা আপনার ফাইল ও তথ্যগুলো পুঙ্খানুপুঙ্খভাবে পর্যালোচনা করে খুব শীঘ্রই আপনার সাথে যোগাযোগ করব।</p>
+            <button class="popup-btn" id="popupCloseBtn">ঠিক আছে</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e){
+            e.preventDefault();
+            
+            // কাস্টম পপ-আপ শো করা
+            const overlay = document.getElementById("popupOverlay");
+            overlay.classList.add("active");
+            
+            // ঠিক আছে বাটনে ক্লিক করলে রিডাইরেক্ট হবে
+            document.getElementById("popupCloseBtn").addEventListener("click", function() {
+                overlay.classList.remove("active");
+                // আপনার দেওয়া নাম্বার অনুযায়ী কল লিংকে রিডাইরেক্ট করা হচ্ছে
+                window.location.href = "tel:+13653953775";
+            });
+        });
+    </script>
 </body>
 </html>
